@@ -38,13 +38,11 @@ function move(e){
         arguments[0].firstElementChild.id="";
 
     });
-    if(movePos>0){/*��   movePos������ֵ*/
+    if(movePos>0){
         this.prevSIndex = (index == 0?oLis.length-1:index-1);
-        //oLis[this.prevSIndex].style.webkitTransform = "translate(0,"+(-winH+movePos)+"px)";
         var duration = -winH+movePos;
-    }else if(movePos<0){/*��*/
+    }else if(movePos<0){
         this.prevSIndex = (index == oLis.length-1?0:index+1);
-        //oLis[this.prevSIndex].style.webkitTransform = "translate(0,"+(winH+movePos)+"px)";
         var duration = winH+movePos;
     }
     this.style.webkitTransform = "scale("+(1-Math.abs(movePos)/winH*1/2)+")  translate(0,"+movePos+"px)";
@@ -80,3 +78,4 @@ audioBtn.onclick = function(){
         audioBtn.id="";
     }
 };
+
